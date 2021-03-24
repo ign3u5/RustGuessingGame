@@ -3,6 +3,24 @@ use rand::Rng;
 use std::cmp::Ordering;
 
 fn main() {
+    testing_loop();
+}
+
+fn testing_loop() {
+    let mut counter = 0;
+
+    let result = loop {
+        counter += 1;
+
+        if counter == 10 {
+            break counter * 2; //Semicolon doesn't matter here
+        }
+    };
+
+    println!("The result is: {}", result);
+}
+
+fn guessing_game() {
     println!("Guess the number!");
 
     let secret_number = rand::thread_rng().gen_range(1, 101);
