@@ -6,10 +6,12 @@ fn main() {
     println!("Starting testing_loops");
     testing_loops();
     println!("Ending testing_loops");
-
+    println!();
+    
     println!("Starting guessing_game");
     guessing_game();
     println!("Ending guessing_game");
+    println!();
 }
 
 //Testing loops
