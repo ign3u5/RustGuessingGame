@@ -3,12 +3,21 @@ use rand::Rng;
 use std::cmp::Ordering;
 
 fn main() {
-    testing_loop();
+    println!("Starting testing_loops");
+    testing_loops();
+    println!("Ending testing_loops");
+
+    println!("Starting guessing_game");
+    guessing_game();
+    println!("Ending guessing_game");
 }
 
-fn testing_loop() {
+//Testing loops
+fn testing_loops() {
     let mut counter = 0;
+    let a = [10, 20, 30, 40, 50];
 
+    //Standard loop - Expression
     let result = loop {
         counter += 1;
 
@@ -17,10 +26,22 @@ fn testing_loop() {
         }
     };
 
+    //While loop - Statement
+    while counter < 30 {
+        counter += 1;
+    };
+    
+    //For loop - Statement
+    for element in a.iter() {
+        println!("The value is: {}", element);
+    }
+
     println!("The result is: {}", result);
 }
 
+//Guessing game
 fn guessing_game() {
+    println!("{}", welcome_message_builder("Chris"));
     println!("Guess the number!");
 
     let secret_number = rand::thread_rng().gen_range(1, 101);
@@ -54,4 +75,10 @@ fn guessing_game() {
             },
         }
     }
+}
+
+fn welcome_message_builder(input: &str) -> String {
+    let mut welcome_message = String::from("Hello ");
+    welcome_message.push_str(input);
+    welcome_message
 }
