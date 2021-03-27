@@ -3,6 +3,7 @@ pub fn run() {
     updating_a_vector();
     getting_elements();
     altering_elements();
+    vector_of_different_types();
 }
 
 fn vectors() {
@@ -40,4 +41,21 @@ fn altering_elements() {
     }
 
     println!("The array now looks like {:#?}", v); //To print inline us {:?}
+}
+
+#[derive(Debug)]
+enum VTypes {
+    Int(i32),
+    Float(f64),
+    String(String),
+}
+
+fn vector_of_different_types() {
+    let v = vec![
+        VTypes::Int(5),
+        VTypes::String(String::from("Hello")),
+        VTypes::Int(7),
+    ];
+
+    println!("The V Types vector looks like {:#?}", v);
 }
