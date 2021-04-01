@@ -2,9 +2,10 @@ mod guessing_game;
 mod loops;
 mod common_programming_concepts;
 mod common_collections;
+mod structs_with_methods;
 
 fn main() {
-    common_collections::run();
+    structs_with_methods::get_rectangle_area();
 }
 
 fn some_concepts() {
