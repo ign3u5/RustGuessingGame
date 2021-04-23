@@ -3,9 +3,10 @@ mod loops;
 mod common_programming_concepts;
 mod common_collections;
 mod structs_with_methods;
+mod web_server;
 
 fn main() {
-    structs_with_methods::get_rectangle_area();
+    web_server::web_listener();
 }
 
 fn some_concepts() {
